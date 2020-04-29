@@ -52,7 +52,7 @@
 <?rfc subcompact="no" ?>
 <!-- keep one blank line between list items -->
 <!-- end of list of popular I-D processing instructions -->
-<rfc category="std" docName="draft-ietf-ace-oauth-params-12" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-ace-oauth-params-13" ipr="trust200902">
   <!-- category values: std, bcp, info, exp, and historic
      ipr values: full3667, noModification3667, noDerivatives3667
      you can add the attributes updates="NNNN" and obsoletes="NNNN"
@@ -134,10 +134,10 @@
   facilitate their use in a manner independent of
   <xref target="I-D.ietf-ace-oauth-authz"/>.</t>
   
-  <t>Note that although all examples are shown in CBOR
-  <xref target="RFC7049"/>, JSON <xref target="RFC8259"/> MAY be used as an
-  alternative for HTTP-based communications, as specified in
-  <xref target="I-D.ietf-ace-oauth-authz"/>.</t>
+  <t>Note that although all examples are shown in Concise Binary Object
+  Respresentation (CBOR) <xref target="RFC7049"/>, JSON
+  <xref target="RFC8259"/> MAY be used as an alternative for HTTP-based
+  communications, as specified in <xref target="I-D.ietf-ace-oauth-authz"/>.</t>
 </section>
 
 <!-- ***************************************************** -->
@@ -158,9 +158,10 @@ target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in 
 
   <t>Note that the term "endpoint" is used here following its OAuth 2.0
   <xref target="RFC6749"/> definition, which is to denote resources such as
-  token and introspection at the AS and authz-info at the RS.  The CoAP
-  <xref target="RFC7252"/> definition, which is "An entity participating in the
-  CoAP protocol" is not used in this specification.</t>
+  token and introspection at the AS and authz-info at the RS.  The Constrained
+  Application Protocol (CoAP) <xref target="RFC7252"/> definition, which is "An
+  entity participating in the CoAP protocol" is not used in this
+  specification.</t>
 </section>
 
 <!-- ***************************************************** -->
