@@ -52,7 +52,7 @@
 <?rfc subcompact="no" ?>
 <!-- keep one blank line between list items -->
 <!-- end of list of popular I-D processing instructions -->
-<rfc category="std" docName="draft-ietf-ace-oauth-params-13" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-ace-oauth-params-14" ipr="trust200902">
   <!-- category values: std, bcp, info, exp, and historic
      ipr values: full3667, noModification3667, noDerivatives3667
      you can add the attributes updates="NNNN" and obsoletes="NNNN"
@@ -183,10 +183,12 @@ target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in 
 	It is RECOMMENDED that an AS reject a request containing a symmetric
 	key value in the 'req_cnf' field (kty=Symmetric), since the AS is
 	expected to be able to generate better symmetric keys than a
-	constrained client.  The AS MUST verify that the client really is in
-	possession of the corresponding key.  Values of this parameter follow
-	the syntax and semantics of the "cnf" claim either from section 3.1 of
-	<xref target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
+	constrained client (Note: this does not apply to key identifiers
+	referencing a symmetric key).  The AS MUST verify that the client
+	really is in possession of the corresponding key.  Values of this
+	parameter follow the syntax and semantics of the "cnf" claim either
+	from section 3.1 of <xref
+	target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
 	interactions or from section 3.1 of <xref target="RFC7800"/> for
 	JSON-based interactions.</t>
       </list>
@@ -352,7 +354,8 @@ Payload:
 </section> <!-- introspection -->
 
 <section anchor="paramCnf" title="Confirmation Method Parameters">
-  <t>The confirmation method parameters are used as follows:
+  <t>The confirmation method parameters are used in
+  <xref target="I-D.ietf-ace-oauth-authz"/> as follows:
     <list style="symbols">
       <t>"req_cnf" in the access token request C -> AS, OPTIONAL to indicate
       the  client's raw public key, or the key-identifier of a previously

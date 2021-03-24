@@ -4,13 +4,13 @@
 
 ACE Working Group                                               L. Seitz
 Internet-Draft                                                 Combitech
-Intended status: Standards Track                          April 29, 2020
-Expires: October 31, 2020
+Intended status: Standards Track                          March 24, 2020
+Expires: September 25, 2021
 
 
       Additional OAuth Parameters for Authorization in Constrained
                            Environments (ACE)
-                     draft-ietf-ace-oauth-params-13
+                     draft-ietf-ace-oauth-params-14
 
 Abstract
 
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 31, 2020.
+   This Internet-Draft will expire on September 25, 2021.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Seitz                   Expires October 31, 2020                [Page 1]
+Seitz                  Expires September 25, 2021               [Page 1]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
    include Simplified BSD License text as described in Section 4.e of
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Seitz                   Expires October 31, 2020                [Page 2]
+Seitz                  Expires September 25, 2021               [Page 2]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
 2.  Terminology
@@ -154,8 +154,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
       possession.  It is RECOMMENDED that an AS reject a request
       containing a symmetric key value in the 'req_cnf' field
       (kty=Symmetric), since the AS is expected to be able to generate
-      better symmetric keys than a constrained client.  The AS MUST
-      verify that the client really is in possession of the
+      better symmetric keys than a constrained client (Note: this does
+      not apply to key identifiers referencing a symmetric key).  The AS
+      MUST verify that the client really is in possession of the
       corresponding key.  Values of this parameter follow the syntax and
       semantics of the "cnf" claim either from section 3.1 of
       [I-D.ietf-ace-cwt-proof-of-possession] for CBOR-based interactions
@@ -164,10 +165,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-
-Seitz                   Expires October 31, 2020                [Page 3]
+Seitz                  Expires September 25, 2021               [Page 3]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
    Figure 1 shows a request for an access token using the "req_cnf"
@@ -221,9 +221,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-Seitz                   Expires October 31, 2020                [Page 4]
+Seitz                  Expires September 25, 2021               [Page 4]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
       parameter is absent, either the RS does not use a public key or
@@ -277,9 +277,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-Seitz                   Expires October 31, 2020                [Page 5]
+Seitz                  Expires September 25, 2021               [Page 5]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
    Header: Created (Code=2.01)
@@ -333,9 +333,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-Seitz                   Expires October 31, 2020                [Page 6]
+Seitz                  Expires September 25, 2021               [Page 6]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
    Header: Created Code=2.01)
@@ -362,7 +362,8 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 5.  Confirmation Method Parameters
 
-   The confirmation method parameters are used as follows:
+   The confirmation method parameters are used in
+   [I-D.ietf-ace-oauth-authz] as follows:
 
    o  "req_cnf" in the access token request C -> AS, OPTIONAL to
       indicate the client's raw public key, or the key-identifier of a
@@ -388,10 +389,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-
-Seitz                   Expires October 31, 2020                [Page 7]
+Seitz                  Expires September 25, 2021               [Page 7]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
    Note that the COSE_Key structure in a confirmation claim or parameter
@@ -445,9 +445,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-Seitz                   Expires October 31, 2020                [Page 8]
+Seitz                  Expires September 25, 2021               [Page 8]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
 9.  Privacy Considerations
@@ -501,9 +501,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-Seitz                   Expires October 31, 2020                [Page 9]
+Seitz                  Expires September 25, 2021               [Page 9]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
 10.3.  OAuth Token Introspection Response CBOR Mappings Registration
@@ -540,8 +540,8 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
               Seitz, L., Selander, G., Wahlstroem, E., Erdtman, S., and
               H. Tschofenig, "Authentication and Authorization for
               Constrained Environments (ACE) using the OAuth 2.0
-              Framework (ACE-OAuth)", draft-ietf-ace-oauth-authz-33
-              (work in progress), February 2020.
+              Framework (ACE-OAuth)", draft-ietf-ace-oauth-authz-36
+              (work in progress), November 2020.
 
    [I-D.ietf-oauth-mtls]
               Campbell, B., Bradley, J., Sakimura, N., and T.
@@ -557,9 +557,9 @@ Internet-Draft              ACE-OAuth-Params                  April 2020
 
 
 
-Seitz                   Expires October 31, 2020               [Page 10]
+Seitz                  Expires September 25, 2021              [Page 10]
 
-Internet-Draft              ACE-OAuth-Params                  April 2020
+Internet-Draft              ACE-OAuth-Params                  March 2020
 
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
@@ -613,4 +613,4 @@ Author's Address
 
 
 
-Seitz                   Expires October 31, 2020               [Page 11]
+Seitz                  Expires September 25, 2021              [Page 11]
