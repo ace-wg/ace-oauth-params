@@ -98,7 +98,7 @@ Table of Contents
    [I-D.ietf-ace-oauth-authz].
 
    Note that although all examples are shown in Concise Binary Object
-   Respresentation (CBOR) [RFC7049], JSON [RFC8259] MAY be used as an
+   Representation (CBOR) [RFC7049], JSON [RFC8259] MAY be used as an
    alternative for HTTP-based communications, as specified in
    [I-D.ietf-ace-oauth-authz].
 

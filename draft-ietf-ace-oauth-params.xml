@@ -135,7 +135,7 @@
   <xref target="I-D.ietf-ace-oauth-authz"/>.</t>
   
   <t>Note that although all examples are shown in Concise Binary Object
-  Respresentation (CBOR) <xref target="RFC7049"/>, JSON
+  Representation (CBOR) <xref target="RFC7049"/>, JSON
   <xref target="RFC8259"/> MAY be used as an alternative for HTTP-based
   communications, as specified in <xref target="I-D.ietf-ace-oauth-authz"/>.</t>
 </section>
