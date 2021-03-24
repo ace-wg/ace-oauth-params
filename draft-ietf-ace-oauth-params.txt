@@ -4,7 +4,7 @@
 
 ACE Working Group                                               L. Seitz
 Internet-Draft                                                 Combitech
-Intended status: Standards Track                          March 24, 2020
+Intended status: Standards Track                          March 24, 2021
 Expires: September 25, 2021
 
 
@@ -41,7 +41,7 @@ Status of This Memo
 
 Copyright Notice
 
-   Copyright (c) 2020 IETF Trust and the persons identified as the
+   Copyright (c) 2021 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -55,7 +55,7 @@ Copyright Notice
 
 Seitz                  Expires September 25, 2021               [Page 1]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
    include Simplified BSD License text as described in Section 4.e of
@@ -111,7 +111,7 @@ Table of Contents
 
 Seitz                  Expires September 25, 2021               [Page 2]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 2.  Terminology
@@ -167,7 +167,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021               [Page 3]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
    Figure 1 shows a request for an access token using the "req_cnf"
@@ -223,7 +223,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021               [Page 4]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
       parameter is absent, either the RS does not use a public key or
@@ -279,7 +279,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021               [Page 5]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
    Header: Created (Code=2.01)
@@ -335,7 +335,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021               [Page 6]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
    Header: Created Code=2.01)
@@ -391,7 +391,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021               [Page 7]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
    Note that the COSE_Key structure in a confirmation claim or parameter
@@ -447,7 +447,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021               [Page 8]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 9.  Privacy Considerations
@@ -503,7 +503,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021               [Page 9]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 10.3.  OAuth Token Introspection Response CBOR Mappings Registration
@@ -559,7 +559,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2020
 
 Seitz                  Expires September 25, 2021              [Page 10]
 
-Internet-Draft              ACE-OAuth-Params                  March 2020
+Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
