@@ -157,11 +157,11 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
       better symmetric keys than a constrained client (Note: this does
       not apply to key identifiers referencing a symmetric key).  The AS
       MUST verify that the client really is in possession of the
-      corresponding key.  Values of this parameter follow the syntax and
-      semantics of the "cnf" claim either from section 3.1 of
-      [I-D.ietf-ace-cwt-proof-of-possession] for CBOR-based interactions
-      or from section 3.1 of [RFC7800] for JSON-based interactions.
-
+      corresponding key.  Profiles of [I-D.ietf-ace-oauth-authz] using
+      this specification MUST define the proof-of-possession method used
+      by the AS, if they allow clients to use this request parameter.
+      Values of this parameter follow the syntax and semantics of the
+      "cnf" claim either from section 3.1 of
 
 
 
@@ -169,6 +169,9 @@ Seitz                  Expires September 26, 2021               [Page 3]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
+
+      [I-D.ietf-ace-cwt-proof-of-possession] for CBOR-based interactions
+      or from section 3.1 of [RFC7800] for JSON-based interactions.
 
    Figure 1 shows a request for an access token using the "req_cnf"
    parameter to request a specific public key as proof-of-possession
@@ -215,9 +218,6 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
    rs_cnf
-      OPTIONAL if the token type is "pop" and asymmetric keys are used.
-      MUST NOT be present otherwise.  This field contains information
-      about the public key used by the RS to authenticate.  If this
 
 
 
@@ -226,6 +226,9 @@ Seitz                  Expires September 26, 2021               [Page 4]
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
+      OPTIONAL if the token type is "pop" and asymmetric keys are used.
+      MUST NOT be present otherwise.  This field contains information
+      about the public key used by the RS to authenticate.  If this
       parameter is absent, either the RS does not use a public key or
       the AS knows that the RS can authenticate itself to the client
       without additional information.  Values of this parameter follow
@@ -260,9 +263,6 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
    Figure 3 shows an AS response containing a token bound to a
    previously requested asymmetric proof-of-possession key (not shown)
    and a "rs_cnf" parameter containing the public key of the RS.
-
-
-
 
 
 
@@ -398,8 +398,8 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
    may contain an "alg" or "key_ops" parameter.  If such parameters are
    present, a client MUST NOT use a key that is incompatible with the
    profile or proof-of-possession algorithm according to those
-   parameters.  An RS MUST reject a proof-of-possession using such a
-   key.
+   parameters.  An RS MUST reject a proof-of-possession using such a key
+   with a response code equivalent to the CoAP code 4.00 (Bad Request).
 
    If an access token is issued for an audience that includes several
    RS, the "rs_cnf" parameter MUST NOT be used, since the client cannot

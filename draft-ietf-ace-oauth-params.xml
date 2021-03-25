@@ -185,10 +185,12 @@ target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in 
 	expected to be able to generate better symmetric keys than a
 	constrained client (Note: this does not apply to key identifiers
 	referencing a symmetric key).  The AS MUST verify that the client
-	really is in possession of the corresponding key.  Values of this
-	parameter follow the syntax and semantics of the "cnf" claim either
-	from section 3.1 of <xref
-	target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
+	really is in possession of the corresponding key.  Profiles of
+	<xref target="I-D.ietf-ace-oauth-authz"/> using this specification MUST
+	define the proof-of-possession method used by the AS, if they allow
+	clients to use this request parameter.  Values of this parameter follow
+	the syntax and semantics of the "cnf" claim either from section 3.1 of
+	<xref target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
 	interactions or from section 3.1 of <xref target="RFC7800"/> for
 	JSON-based interactions.</t>
       </list>
@@ -383,7 +385,8 @@ Payload:
   may contain an "alg" or "key_ops" parameter.  If such parameters are
   present, a client MUST NOT use a key that is incompatible with
   the profile or proof-of-possession algorithm according to those
-  parameters. An RS MUST reject a proof-of-possession using such a key.
+  parameters. An RS MUST reject a proof-of-possession using such a key with
+  a response code equivalent to the CoAP code 4.00 (Bad Request).
   </t>
 
   <t>If an access token is issued for an audience that includes several RS,
