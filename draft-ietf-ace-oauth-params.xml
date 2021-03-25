@@ -10,8 +10,6 @@
 "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
 <!ENTITY RFC6749 SYSTEM
 "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6749.xml">
-<!ENTITY RFC7049 SYSTEM
-"http://xml.resource.org/public/rfc/bibxml/reference.RFC.7049.xml">
 <!ENTITY RFC7252 SYSTEM
 "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7252.xml">
 <!ENTITY RFC7800 SYSTEM
@@ -22,9 +20,13 @@
 "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8174.xml">
 <!ENTITY RFC8259 SYSTEM
 "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8259.xml">
+<!ENTITY RFC8705 SYSTEM
+"http://xml.resource.org/public/rfc/bibxml/reference.RFC.8705.xml">
+<!ENTITY RFC8747 SYSTEM
+"http://xml.resource.org/public/rfc/bibxml/reference.RFC.8747.xml">
+<!ENTITY RFC8949 SYSTEM
+"http://xml.resource.org/public/rfc/bibxml/reference.RFC.8949.xml">
 <!ENTITY I-D.ietf-ace-oauth-authz SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-ace-oauth-authz.xml">
-<!ENTITY I-D.ietf-ace-cwt-proof-of-possession SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-ace-cwt-proof-of-possession.xml">
-<!ENTITY I-D.ietf-oauth-mtls SYSTEM "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-oauth-mtls">
 ]>
 
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
@@ -135,7 +137,7 @@
   <xref target="I-D.ietf-ace-oauth-authz"/>.</t>
   
   <t>Note that although all examples are shown in Concise Binary Object
-  Representation (CBOR) <xref target="RFC7049"/>, JSON
+  Representation (CBOR) <xref target="RFC8949"/>, JSON
   <xref target="RFC8259"/> MAY be used as an alternative for HTTP-based
   communications, as specified in <xref target="I-D.ietf-ace-oauth-authz"/>.</t>
 </section>
@@ -190,9 +192,8 @@ target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in 
 	define the proof-of-possession method used by the AS, if they allow
 	clients to use this request parameter.  Values of this parameter follow
 	the syntax and semantics of the "cnf" claim either from section 3.1 of
-	<xref target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
-	interactions or from section 3.1 of <xref target="RFC7800"/> for
-	JSON-based interactions.</t>
+	<xref target="RFC8747"/> for CBOR-based	interactions or from section 3.1
+	of <xref target="RFC7800"/> for	JSON-based interactions.</t>
       </list>
   </t>
 
@@ -238,11 +239,11 @@ Payload:
 	MAY be present for asymmetric proof-of-possession keys.  This field
 	contains the proof-of-possession key that the AS selected for the
 	token. 	Values of this parameter follow the syntax and semantics of the
-	"cnf" claim either from section 3.1 of
-	<xref target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
-	interactions or from section 3.1 of <xref target="RFC7800"/> for
-	JSON-based interactions.  See <xref target="paramCnf"/> for additional
-	discussion of the usage of this parameter.<vspace blankLines="1"/></t>
+	"cnf" claim either from section 3.1 of <xref target="RFC8747"/> for
+	CBOR-based interactions or from section 3.1 of <xref target="RFC7800"/>
+	for JSON-based interactions.  See <xref target="paramCnf"/> for
+	additional discussion of the usage of this parameter.
+	<vspace blankLines="1"/></t>
 
 	<t hangText="rs_cnf"><vspace blankLines="0"/>
 	OPTIONAL if the token type is "pop" and asymmetric keys are used.
@@ -252,10 +253,10 @@ Payload:
 	the RS can authenticate itself to the client without additional
 	information.  Values of this parameter follow the syntax and semantics
 	of the "cnf" claim either from section 3.1 of
-	<xref target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
-	interactions or from section 3.1 of <xref target="RFC7800"/> for
-	JSON-based interactions.  See <xref target="paramCnf"/> for additional
-	discussion of the usage of this parameter. </t>
+	<xref target="RFC8747"/> for CBOR-based	interactions or from section 3.1
+	of <xref target="RFC7800"/> for	JSON-based interactions.  See
+	<xref target="paramCnf"/> for additional discussion of the usage of this
+	parameter. </t>
       </list>
     </t>
 
@@ -317,13 +318,13 @@ Payload:
  title="Parameters for the Introspection Endpoint">
   <t>This section defines the use of CBOR instead of JSON for the "cnf"
   introspection response parameter specified in section 9.4 of <xref
-  target="I-D.ietf-oauth-mtls"/>.</t>
+  target="RFC8705"/>.</t>
 
   <t>If CBOR is used instead of JSON in an interaction with the introspection
   endpoint, the AS MUST use the parameter mapping specified in <xref
   target="fig:cborParameters"/> and the value must follow the syntax of "cnf"
   claim values from section 3.1 of <xref
-  target="I-D.ietf-ace-cwt-proof-of-possession"/>.</t>
+  target="RFC8747"/>.</t>
     
   <t><xref target="fig:introRes"/> shows an AS response to an introspection
   request including the "cnf" parameter to indicate the proof-of-possession
@@ -555,16 +556,15 @@ Payload:
     <references title="Normative References">
       <!--?rfc include="http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml"?-->
       &I-D.ietf-ace-oauth-authz;
-      &I-D.ietf-ace-cwt-proof-of-possession;
-      &I-D.ietf-oauth-mtls;
       &RFC2119;
       &RFC6749;
-      &RFC7049;
       &RFC7800;
       &RFC8152;
       &RFC8174;
       &RFC8259;
-      
+      &RFC8705;
+      &RFC8747;
+      &RFC8949;
       <reference anchor="IANA.OAuthParameters" target="https://www.iana.org/assignments/oauth-parameters/oauth-parameters.xhtml#parameters">
 	<front>
 	  <title>OAuth Parameters</title>

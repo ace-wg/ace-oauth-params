@@ -98,7 +98,7 @@ Table of Contents
    [I-D.ietf-ace-oauth-authz].
 
    Note that although all examples are shown in Concise Binary Object
-   Representation (CBOR) [RFC7049], JSON [RFC8259] MAY be used as an
+   Representation (CBOR) [RFC8949], JSON [RFC8259] MAY be used as an
    alternative for HTTP-based communications, as specified in
    [I-D.ietf-ace-oauth-authz].
 
@@ -161,7 +161,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
       this specification MUST define the proof-of-possession method used
       by the AS, if they allow clients to use this request parameter.
       Values of this parameter follow the syntax and semantics of the
-      "cnf" claim either from section 3.1 of
+      "cnf" claim either from section 3.1 of [RFC8747] for CBOR-based
 
 
 
@@ -170,8 +170,8 @@ Seitz                  Expires September 26, 2021               [Page 3]
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
-      [I-D.ietf-ace-cwt-proof-of-possession] for CBOR-based interactions
-      or from section 3.1 of [RFC7800] for JSON-based interactions.
+      interactions or from section 3.1 of [RFC7800] for JSON-based
+      interactions.
 
    Figure 1 shows a request for an access token using the "req_cnf"
    parameter to request a specific public key as proof-of-possession
@@ -210,14 +210,14 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
       MAY be present for asymmetric proof-of-possession keys.  This
       field contains the proof-of-possession key that the AS selected
       for the token.  Values of this parameter follow the syntax and
-      semantics of the "cnf" claim either from section 3.1 of
-      [I-D.ietf-ace-cwt-proof-of-possession] for CBOR-based interactions
-      or from section 3.1 of [RFC7800] for JSON-based interactions.  See
-      Section 5 for additional discussion of the usage of this
-      parameter.
+      semantics of the "cnf" claim either from section 3.1 of [RFC8747]
+      for CBOR-based interactions or from section 3.1 of [RFC7800] for
+      JSON-based interactions.  See Section 5 for additional discussion
+      of the usage of this parameter.
 
 
    rs_cnf
+
 
 
 
@@ -233,10 +233,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
       the AS knows that the RS can authenticate itself to the client
       without additional information.  Values of this parameter follow
       the syntax and semantics of the "cnf" claim either from section
-      3.1 of [I-D.ietf-ace-cwt-proof-of-possession] for CBOR-based
-      interactions or from section 3.1 of [RFC7800] for JSON-based
-      interactions.  See Section 5 for additional discussion of the
-      usage of this parameter.
+      3.1 of [RFC8747] for CBOR-based interactions or from section 3.1
+      of [RFC7800] for JSON-based interactions.  See Section 5 for
+      additional discussion of the usage of this parameter.
 
    Figure 2 shows an AS response containing a token and a "cnf"
    parameter with a symmetric proof-of-possession key.
@@ -263,6 +262,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
    Figure 3 shows an AS response containing a token bound to a
    previously requested asymmetric proof-of-possession key (not shown)
    and a "rs_cnf" parameter containing the public key of the RS.
+
 
 
 
@@ -307,17 +307,17 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
    This section defines the use of CBOR instead of JSON for the "cnf"
    introspection response parameter specified in section 9.4 of
-   [I-D.ietf-oauth-mtls].
+   [RFC8705].
 
    If CBOR is used instead of JSON in an interaction with the
    introspection endpoint, the AS MUST use the parameter mapping
    specified in Figure 5 and the value must follow the syntax of "cnf"
-   claim values from section 3.1 of
-   [I-D.ietf-ace-cwt-proof-of-possession].
+   claim values from section 3.1 of [RFC8747].
 
    Figure 4 shows an AS response to an introspection request including
    the "cnf" parameter to indicate the proof-of-possession key bound to
    the token.
+
 
 
 
@@ -530,12 +530,6 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 12.1.  Normative References
 
-   [I-D.ietf-ace-cwt-proof-of-possession]
-              Jones, M., Seitz, L., Selander, G., Erdtman, S., and H.
-              Tschofenig, "Proof-of-Possession Key Semantics for CBOR
-              Web Tokens (CWTs)", draft-ietf-ace-cwt-proof-of-
-              possession-11 (work in progress), October 2019.
-
    [I-D.ietf-ace-oauth-authz]
               Seitz, L., Selander, G., Wahlstroem, E., Erdtman, S., and
               H. Tschofenig, "Authentication and Authorization for
@@ -543,24 +537,10 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
               Framework (ACE-OAuth)", draft-ietf-ace-oauth-authz-36
               (work in progress), November 2020.
 
-   [I-D.ietf-oauth-mtls]
-              Campbell, B., Bradley, J., Sakimura, N., and T.
-              Lodderstedt, "OAuth 2.0 Mutual-TLS Client Authentication
-              and Certificate-Bound Access Tokens", draft-ietf-oauth-
-              mtls-17 (work in progress), August 2019.
-
    [IANA.OAuthParameters]
               IANA, "OAuth Parameters",
               <https://www.iana.org/assignments/oauth-parameters/oauth-
               parameters.xhtml#parameters>.
-
-
-
-
-Seitz                  Expires September 26, 2021              [Page 10]
-
-Internet-Draft              ACE-OAuth-Params                  March 2021
-
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -571,9 +551,16 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
               RFC 6749, DOI 10.17487/RFC6749, October 2012,
               <https://www.rfc-editor.org/info/rfc6749>.
 
-   [RFC7049]  Bormann, C. and P. Hoffman, "Concise Binary Object
-              Representation (CBOR)", RFC 7049, DOI 10.17487/RFC7049,
-              October 2013, <https://www.rfc-editor.org/info/rfc7049>.
+
+
+
+
+
+
+Seitz                  Expires September 26, 2021              [Page 10]
+
+Internet-Draft              ACE-OAuth-Params                  March 2021
+
 
    [RFC7800]  Jones, M., Bradley, J., and H. Tschofenig, "Proof-of-
               Possession Key Semantics for JSON Web Tokens (JWTs)",
@@ -593,6 +580,22 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
               DOI 10.17487/RFC8259, December 2017,
               <https://www.rfc-editor.org/info/rfc8259>.
 
+   [RFC8705]  Campbell, B., Bradley, J., Sakimura, N., and T.
+              Lodderstedt, "OAuth 2.0 Mutual-TLS Client Authentication
+              and Certificate-Bound Access Tokens", RFC 8705,
+              DOI 10.17487/RFC8705, February 2020,
+              <https://www.rfc-editor.org/info/rfc8705>.
+
+   [RFC8747]  Jones, M., Seitz, L., Selander, G., Erdtman, S., and H.
+              Tschofenig, "Proof-of-Possession Key Semantics for CBOR
+              Web Tokens (CWTs)", RFC 8747, DOI 10.17487/RFC8747, March
+              2020, <https://www.rfc-editor.org/info/rfc8747>.
+
+   [RFC8949]  Bormann, C. and P. Hoffman, "Concise Binary Object
+              Representation (CBOR)", STD 94, RFC 8949,
+              DOI 10.17487/RFC8949, December 2020,
+              <https://www.rfc-editor.org/info/rfc8949>.
+
 12.2.  Informative References
 
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
@@ -601,6 +604,19 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
               <https://www.rfc-editor.org/info/rfc7252>.
 
 Author's Address
+
+
+
+
+
+
+
+
+
+Seitz                  Expires September 26, 2021              [Page 11]
+
+Internet-Draft              ACE-OAuth-Params                  March 2021
+
 
    Ludwig Seitz
    Combitech
@@ -613,4 +629,44 @@ Author's Address
 
 
 
-Seitz                  Expires September 26, 2021              [Page 11]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Seitz                  Expires September 26, 2021              [Page 12]
