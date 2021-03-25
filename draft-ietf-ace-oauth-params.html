@@ -401,7 +401,7 @@
 
   <meta name="dct.creator" content="Seitz, L." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-ace-oauth-params-14" />
-  <meta name="dct.issued" scheme="ISO8601" content="2021-24" />
+  <meta name="dct.issued" scheme="ISO8601" content="2021-25" />
   <meta name="dct.abstract" content="This specification defines new parameters and encodings for the OAuth 2.0 token and introspection endpoints when used with the framework for authentication and authorization for constrained environments (ACE).  These are used to express the proof-of-possession key the client wishes to use, the proof-of-possession key that the Authorization Server has selected, and the key the Resource Server uses to authenticate to the client." />
   <meta name="description" content="This specification defines new parameters and encodings for the OAuth 2.0 token and introspection endpoints when used with the framework for authentication and authorization for constrained environments (ACE).  These are used to express the proof-of-possession key the client wishes to use, the proof-of-possession key that the Authorization Server has selected, and the key the Resource Server uses to authenticate to the client." />
 
@@ -422,10 +422,10 @@
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">March 24, 2021</td>
+<td class="right">March 25, 2021</td>
 </tr>
 <tr>
-<td class="left">Expires: September 25, 2021</td>
+<td class="left">Expires: September 26, 2021</td>
 <td class="right"></td>
 </tr>
 
@@ -442,7 +442,7 @@
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 25, 2021.</p>
+<p>This Internet-Draft will expire on September 26, 2021.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2021 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -556,7 +556,7 @@ Payload:
 <dl>
 <dt>cnf</dt>
 <dd style="margin-left: 8">
-<br> REQUIRED if the token type is "pop" and a symmetric key is used.  MAY be present for asymmetric proof-of-possession keys.  This field contains the proof-of-possession key that the AS selected for the token. 	Values of this parameter follow the syntax and semantics of the "cnf" claim either from section 3.1 of <a href="#I-D.ietf-ace-cwt-proof-of-possession" class="xref">[I-D.ietf-ace-cwt-proof-of-possession]</a> for CBOR-based interactions of from section 3.1 of <a href="#RFC7800" class="xref">[RFC7800]</a> for JSON-based interactions.  See <a href="#paramCnf" class="xref">Section 5</a> for additional discussion of the usage of this parameter.<br><br>
+<br> REQUIRED if the token type is "pop" and a symmetric key is used.  MAY be present for asymmetric proof-of-possession keys.  This field contains the proof-of-possession key that the AS selected for the token. 	Values of this parameter follow the syntax and semantics of the "cnf" claim either from section 3.1 of <a href="#I-D.ietf-ace-cwt-proof-of-possession" class="xref">[I-D.ietf-ace-cwt-proof-of-possession]</a> for CBOR-based interactions or from section 3.1 of <a href="#RFC7800" class="xref">[RFC7800]</a> for JSON-based interactions.  See <a href="#paramCnf" class="xref">Section 5</a> for additional discussion of the usage of this parameter.<br><br>
 </dd>
 <dt>rs_cnf</dt>
 <dd style="margin-left: 8">
@@ -617,7 +617,7 @@ Payload:
 <div id="rfc.figure.4"></div>
 <div id="fig:introRes"></div>
 <pre>
-Header: Created Code=2.01)
+Header: Created (Code=2.01)
 Content-Format: "application/ace+cbor"
 Payload:
 {

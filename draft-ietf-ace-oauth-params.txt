@@ -4,8 +4,8 @@
 
 ACE Working Group                                               L. Seitz
 Internet-Draft                                                 Combitech
-Intended status: Standards Track                          March 24, 2021
-Expires: September 25, 2021
+Intended status: Standards Track                          March 25, 2021
+Expires: September 26, 2021
 
 
       Additional OAuth Parameters for Authorization in Constrained
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 25, 2021.
+   This Internet-Draft will expire on September 26, 2021.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Seitz                  Expires September 25, 2021               [Page 1]
+Seitz                  Expires September 26, 2021               [Page 1]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Seitz                  Expires September 25, 2021               [Page 2]
+Seitz                  Expires September 26, 2021               [Page 2]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -165,7 +165,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021               [Page 3]
+Seitz                  Expires September 26, 2021               [Page 3]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -209,7 +209,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
       for the token.  Values of this parameter follow the syntax and
       semantics of the "cnf" claim either from section 3.1 of
       [I-D.ietf-ace-cwt-proof-of-possession] for CBOR-based interactions
-      of from section 3.1 of [RFC7800] for JSON-based interactions.  See
+      or from section 3.1 of [RFC7800] for JSON-based interactions.  See
       Section 5 for additional discussion of the usage of this
       parameter.
 
@@ -221,7 +221,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021               [Page 4]
+Seitz                  Expires September 26, 2021               [Page 4]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -277,7 +277,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021               [Page 5]
+Seitz                  Expires September 26, 2021               [Page 5]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -333,12 +333,12 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021               [Page 6]
+Seitz                  Expires September 26, 2021               [Page 6]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
-   Header: Created Code=2.01)
+   Header: Created (Code=2.01)
    Content-Format: "application/ace+cbor"
    Payload:
    {
@@ -389,7 +389,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021               [Page 7]
+Seitz                  Expires September 26, 2021               [Page 7]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -445,7 +445,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021               [Page 8]
+Seitz                  Expires September 26, 2021               [Page 8]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -501,7 +501,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021               [Page 9]
+Seitz                  Expires September 26, 2021               [Page 9]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -557,7 +557,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 25, 2021              [Page 10]
+Seitz                  Expires September 26, 2021              [Page 10]
 
 Internet-Draft              ACE-OAuth-Params                  March 2021
 
@@ -613,4 +613,4 @@ Author's Address
 
 
 
-Seitz                  Expires September 25, 2021              [Page 11]
+Seitz                  Expires September 26, 2021              [Page 11]

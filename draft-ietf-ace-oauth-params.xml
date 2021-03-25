@@ -238,7 +238,7 @@ Payload:
 	token. 	Values of this parameter follow the syntax and semantics of the
 	"cnf" claim either from section 3.1 of
 	<xref target="I-D.ietf-ace-cwt-proof-of-possession"/> for CBOR-based
-	interactions of from section 3.1 of <xref target="RFC7800"/> for
+	interactions or from section 3.1 of <xref target="RFC7800"/> for
 	JSON-based interactions.  See <xref target="paramCnf"/> for additional
 	discussion of the usage of this parameter.<vspace blankLines="1"/></t>
 
@@ -330,7 +330,7 @@ Payload:
     <figure align="center" anchor="fig:introRes"
             title="Example introspection response.">
       <artwork align="left"><![CDATA[
-Header: Created Code=2.01)
+Header: Created (Code=2.01)
 Content-Format: "application/ace+cbor"
 Payload:
 {
