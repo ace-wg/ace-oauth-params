@@ -4,8 +4,8 @@
 
 ACE Working Group                                               L. Seitz
 Internet-Draft                                                 Combitech
-Intended status: Standards Track                          March 25, 2021
-Expires: September 26, 2021
+Intended status: Standards Track                             May 6, 2021
+Expires: November 7, 2021
 
 
       Additional OAuth Parameters for Authorization in Constrained
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 26, 2021.
+   This Internet-Draft will expire on November 7, 2021.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Seitz                  Expires September 26, 2021               [Page 1]
+Seitz                   Expires November 7, 2021                [Page 1]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
    include Simplified BSD License text as described in Section 4.e of
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Seitz                  Expires September 26, 2021               [Page 2]
+Seitz                   Expires November 7, 2021                [Page 2]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
 2.  Terminology
@@ -165,9 +165,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021               [Page 3]
+Seitz                   Expires November 7, 2021                [Page 3]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
       interactions or from section 3.1 of [RFC7800] for JSON-based
@@ -221,9 +221,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021               [Page 4]
+Seitz                   Expires November 7, 2021                [Page 4]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
       OPTIONAL if the token type is "pop" and asymmetric keys are used.
@@ -277,9 +277,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021               [Page 5]
+Seitz                   Expires November 7, 2021                [Page 5]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
    Header: Created (Code=2.01)
@@ -333,9 +333,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021               [Page 6]
+Seitz                   Expires November 7, 2021                [Page 6]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
    Header: Created (Code=2.01)
@@ -389,9 +389,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021               [Page 7]
+Seitz                   Expires November 7, 2021                [Page 7]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
    Note that the COSE_Key structure in a confirmation claim or parameter
@@ -445,9 +445,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021               [Page 8]
+Seitz                   Expires November 7, 2021                [Page 8]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
 9.  Privacy Considerations
@@ -501,9 +501,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021               [Page 9]
+Seitz                   Expires November 7, 2021                [Page 9]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
 10.3.  OAuth Token Introspection Response CBOR Mappings Registration
@@ -534,8 +534,8 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
               Seitz, L., Selander, G., Wahlstroem, E., Erdtman, S., and
               H. Tschofenig, "Authentication and Authorization for
               Constrained Environments (ACE) using the OAuth 2.0
-              Framework (ACE-OAuth)", draft-ietf-ace-oauth-authz-36
-              (work in progress), November 2020.
+              Framework (ACE-OAuth)", draft-ietf-ace-oauth-authz-40
+              (work in progress), April 2021.
 
    [IANA.OAuthParameters]
               IANA, "OAuth Parameters",
@@ -557,9 +557,9 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021              [Page 10]
+Seitz                   Expires November 7, 2021               [Page 10]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
    [RFC7800]  Jones, M., Bradley, J., and H. Tschofenig, "Proof-of-
@@ -613,9 +613,9 @@ Author's Address
 
 
 
-Seitz                  Expires September 26, 2021              [Page 11]
+Seitz                   Expires November 7, 2021               [Page 11]
 
-Internet-Draft              ACE-OAuth-Params                  March 2021
+Internet-Draft              ACE-OAuth-Params                    May 2021
 
 
    Ludwig Seitz
@@ -624,7 +624,7 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
    Malmoe  211 35
    Sweden
 
-   Email: ludwig.seitz@combitech.se
+   Email: ludwig.seitz@combitech.com
 
 
 
@@ -669,4 +669,4 @@ Internet-Draft              ACE-OAuth-Params                  March 2021
 
 
 
-Seitz                  Expires September 26, 2021              [Page 12]
+Seitz                   Expires November 7, 2021               [Page 12]
