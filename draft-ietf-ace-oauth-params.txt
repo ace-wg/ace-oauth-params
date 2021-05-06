@@ -151,7 +151,7 @@ Internet-Draft              ACE-OAuth-Params                    May 2021
    req_cnf
       OPTIONAL.  This field contains information about the key the
       client would like to bind to the access token for proof-of-
-      possession.  It is RECOMMENDED that an AS reject a request
+      possession.  It is RECOMMENDED that an AS rejects a request
       containing a symmetric key value in the 'req_cnf' field
       (kty=Symmetric), since the AS is expected to be able to generate
       better symmetric keys than a constrained client (Note: this does

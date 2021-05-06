@@ -182,7 +182,7 @@ target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in 
 	<t hangText="req_cnf"><vspace blankLines="0"/>
 	OPTIONAL.  This field contains information about the key the
 	client would like to bind to the access token for proof-of-possession.
-	It is RECOMMENDED that an AS reject a request containing a symmetric
+	It is RECOMMENDED that an AS rejects a request containing a symmetric
 	key value in the 'req_cnf' field (kty=Symmetric), since the AS is
 	expected to be able to generate better symmetric keys than a
 	constrained client (Note: this does not apply to key identifiers
