@@ -400,8 +400,8 @@
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Seitz, L." />
-  <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-ace-oauth-params-15" />
-  <meta name="dct.issued" scheme="ISO8601" content="2021-06" />
+  <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-ace-oauth-params-16" />
+  <meta name="dct.issued" scheme="ISO8601" content="2021-08" />
   <meta name="dct.abstract" content="This specification defines new parameters and encodings for the OAuth 2.0 token and introspection endpoints when used with the framework for authentication and authorization for constrained environments (ACE).  These are used to express the proof-of-possession key the client wishes to use, the proof-of-possession key that the Authorization Server has selected, and the key the Resource Server uses to authenticate to the client." />
   <meta name="description" content="This specification defines new parameters and encodings for the OAuth 2.0 token and introspection endpoints when used with the framework for authentication and authorization for constrained environments (ACE).  These are used to express the proof-of-possession key the client wishes to use, the proof-of-possession key that the Authorization Server has selected, and the key the Resource Server uses to authenticate to the client." />
 
@@ -422,10 +422,10 @@
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
-<td class="right">May 6, 2021</td>
+<td class="right">September 8, 2021</td>
 </tr>
 <tr>
-<td class="left">Expires: November 7, 2021</td>
+<td class="left">Expires: March 12, 2022</td>
 <td class="right"></td>
 </tr>
 
@@ -434,7 +434,7 @@
   </table>
 
   <p class="title">Additional OAuth Parameters for Authorization in Constrained Environments (ACE)<br />
-  <span class="filename">draft-ietf-ace-oauth-params-15</span></p>
+  <span class="filename">draft-ietf-ace-oauth-params-16</span></p>
   
   <h1 id="rfc.abstract"><a href="#rfc.abstract">Abstract</a></h1>
 <p>This specification defines new parameters and encodings for the OAuth 2.0 token and introspection endpoints when used with the framework for authentication and authorization for constrained environments (ACE).  These are used to express the proof-of-possession key the client wishes to use, the proof-of-possession key that the Authorization Server has selected, and the key the Resource Server uses to authenticate to the client.</p>
@@ -442,7 +442,7 @@
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on November 7, 2021.</p>
+<p>This Internet-Draft will expire on March 12, 2022.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2021 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -694,7 +694,7 @@ Payload:
 <li>Name: <samp>req_cnf</samp>
 </li>
 <li>Parameter Usage Location: token request</li>
-<li>Change Controller: IESG</li>
+<li>Change Controller: IETF</li>
 <li>Reference: <a href="#paramCnf" class="xref">Section 5</a> of [this document]</li>
 </ul>
 <p></p>
@@ -703,7 +703,7 @@ Payload:
 <li>Name: <samp>rs_cnf</samp>
 </li>
 <li>Parameter Usage Location: token response</li>
-<li>Change Controller: IESG</li>
+<li>Change Controller: IETF</li>
 <li>Reference: <a href="#paramCnf" class="xref">Section 5</a> of [this document]</li>
 </ul>
 <p></p>
@@ -712,7 +712,7 @@ Payload:
 <li>Name: <samp>cnf</samp>
 </li>
 <li>Parameter Usage Location: token response</li>
-<li>Change Controller: IESG</li>
+<li>Change Controller: IETF</li>
 <li>Reference: <a href="#paramCnf" class="xref">Section 5</a> of [this document]</li>
 </ul>
 <h1 id="rfc.section.10.2">
@@ -725,8 +725,9 @@ Payload:
 <li>Name: <samp>req_cnf</samp>
 </li>
 <li>CBOR key: TBD (suggested: 4)</li>
-<li>Change Controller: IESG</li>
+<li>Value Type: map</li>
 <li>Reference: <a href="#tokenRequest" class="xref">Section 3.1</a> of [this document]</li>
+<li>Original specification: [this document]</li>
 </ul>
 <p></p>
 
@@ -734,8 +735,9 @@ Payload:
 <li>Name: <samp>cnf</samp>
 </li>
 <li>CBOR key: TBD (suggested: 8)</li>
-<li>Change Controller: IESG</li>
+<li>Value Type: map</li>
 <li>Reference: <a href="#tokenResponse" class="xref">Section 3.2</a> of [this document]</li>
+<li>Original specification: [this document]</li>
 </ul>
 <p></p>
 
@@ -743,8 +745,9 @@ Payload:
 <li>Name: <samp>rs_cnf</samp>
 </li>
 <li>CBOR key: TBD (suggested: 41)</li>
-<li>Change Controller: IESG</li>
+<li>Value Type: map</li>
 <li>Reference: <a href="#tokenResponse" class="xref">Section 3.2</a> of [this document]</li>
+<li>Original specification: [this document]</li>
 </ul>
 <h1 id="rfc.section.10.3">
 <a href="#rfc.section.10.3">10.3.</a> <a href="#IANAIntrospectCBORMappingRegistration" id="IANAIntrospectCBORMappingRegistration">OAuth Token Introspection Response CBOR Mappings     Registration</a>
@@ -756,8 +759,10 @@ Payload:
 <li>Name: <samp>cnf</samp>
 </li>
 <li>CBOR key: TBD (suggested: 8)</li>
-<li>Change Controller: IESG</li>
+<li>Value Type: map</li>
 <li>Reference: <a href="#introsp" class="xref">Section 4</a> of [this document]</li>
+<li>Original specification: <a href="#RFC8705" class="xref">[RFC8705]</a>
+</li>
 </ul>
 <h1 id="rfc.section.11">
 <a href="#rfc.section.11">11.</a> <a href="#Acknowledgments" id="Acknowledgments">Acknowledgments</a>
@@ -772,7 +777,7 @@ Payload:
 <tr>
 <td class="reference"><b id="I-D.ietf-ace-oauth-authz">[I-D.ietf-ace-oauth-authz]</b></td>
 <td class="top">
-<a title="Combitech">Seitz, L.</a>, <a title="Ericsson">Selander, G.</a>, <a>Wahlstroem, E.</a>, <a title="Spotify AB">Erdtman, S.</a> and <a title="Arm Ltd.">H. Tschofenig</a>, "<a href="https://tools.ietf.org/html/draft-ietf-ace-oauth-authz-40">Authentication and Authorization for Constrained Environments (ACE) using the OAuth 2.0 Framework (ACE-OAuth)</a>", Internet-Draft draft-ietf-ace-oauth-authz-40, April 2021.</td>
+<a title="Combitech">Seitz, L.</a>, <a title="Ericsson">Selander, G.</a>, <a>Wahlstroem, E.</a>, <a title="Spotify AB">Erdtman, S.</a> and <a title="Arm Ltd.">H. Tschofenig</a>, "<a href="https://tools.ietf.org/html/draft-ietf-ace-oauth-authz-45">Authentication and Authorization for Constrained Environments (ACE) using the OAuth 2.0 Framework (ACE-OAuth)</a>", Internet-Draft draft-ietf-ace-oauth-authz-45, August 2021.</td>
 </tr>
 <tr>
 <td class="reference"><b id="IANA.OAuthParameters">[IANA.OAuthParameters]</b></td>
