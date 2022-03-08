@@ -140,8 +140,8 @@ Table of Contents
 
    Figure 1 shows a request for an access token using the "req_cnf"
    parameter to request a specific public key as a PoP key.  The content
-   is displayed in CBOR diagnostic notation without abbreviations and
-   with line breaks for better readability.
+   is displayed in CBOR diagnostic notation with line breaks for better
+   readability.
 
    Header: POST (Code=0.02)
    Uri-Host: "as.example.com"

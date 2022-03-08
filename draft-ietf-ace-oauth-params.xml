@@ -151,7 +151,7 @@ NOT</bcp14>", "<bcp14>SHOULD</bcp14>", "<bcp14>SHOULD NOT</bcp14>", "<bcp14>RECO
         <t><xref target="fig_symmATreq" format="default"/> shows a request for an access
 	token using the <tt>req_cnf</tt> parameter to request a specific public key as a
 	PoP key.  The content is displayed in CBOR diagnostic
-	notation without abbreviations and with line breaks for better readability.</t>
+	notation with line breaks for better readability.</t>
 
 <!--[rfced] Please review the "type" attribute of each sourcecode element 
 in the XML file to ensure correctness. If the current list of preferred 
