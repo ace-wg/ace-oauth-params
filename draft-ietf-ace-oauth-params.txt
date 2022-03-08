@@ -153,7 +153,7 @@ Table of Contents
         / COSE_Key / 1 : {
         / kty /  1 : 2 /EC2/,
         / kid /  2 : h'11',
-        / krv / -1 : 1 /P-256/,
+        / crv / -1 : 1 /P-256/,
         / x /   -2 : h'BAC5B11CAD8F99F9C72B05CF4B9E26D24
                      4DC189F745228255A219A86D6A09EFF',
         / y /   -3 : h'20138BF82DC1B6D562BE0FA54AB7804A3
@@ -229,7 +229,7 @@ Table of Contents
        / COSE_Key / 1 : {
         / kty /  1 : 2 /EC2/,
         / kid /  2 : h'12',
-        / krv / -1 : 1 /P-256/,
+        / crv / -1 : 1 /P-256/,
          / x /  -2 : h'BCEE7EAAC162F91E6F330F5771211E220
                      B8B546C96589B0AC4AD0FD24C77E1F1',
          / y /  -3 : h'C647B38C55EFBBC4E62E651720F002D5D
@@ -265,7 +265,7 @@ Table of Contents
        / COSE_Key / 1 : {
          / kty /  1 : 2 /EC2/,
          / kid /  2 : h'11',
-         / krv / -1 : 1 /P-256/,
+         / crv / -1 : 1 /P-256/,
          / x /   -2 : h'BAC5B11CAD8F99F9C72B05CF4B9E26D24
                       4DC189F745228255A219A86D6A09EFF',
          / y /   -3 : h'20138BF82DC1B6D562BE0FA54AB7804A3
