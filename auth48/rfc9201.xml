@@ -86,7 +86,7 @@ NOT</bcp14>", "<bcp14>SHOULD</bcp14>", "<bcp14>SHOULD NOT</bcp14>", "<bcp14>RECO
         <t>This section defines the <tt>req_cnf</tt> parameter allowing clients to
    request a specific PoP key in an access token from a token
    endpoint in the ACE framework <xref target="RFC9200" format="default"/>:
- 
+
         </t>
         <dl newline="true" spacing="normal">
           <dt>req_cnf</dt>
@@ -130,7 +130,7 @@ Payload:
      / x /   -2 : h'BAC5B11CAD8F99F9C72B05CF4B9E26D24
                   4DC189F745228255A219A86D6A09EFF',
      / y /   -3 : h'20138BF82DC1B6D562BE0FA54AB7804A3
-                  A64B6D72CCFED6B6FB6ED28BBFC117E' 
+                  A64B6D72CCFED6B6FB6ED28BBFC117E'
       }
    }
  }
@@ -390,7 +390,7 @@ Payload:
 	  <dd><xref target="paramCnf" format="default"/> of RFC 9201</dd>
         </dl>
         <dl newline="false" spacing="compact">
-          <dt>Name:</dt> 
+          <dt>Name:</dt>
 	  <dd><tt>cnf</tt></dd>
           <dt>Parameter Usage Location:</dt>
 	  <dd>token response</dd>
